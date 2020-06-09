@@ -1,4 +1,3 @@
-import dotenv from "dotenv";
 import path from "path";
 import userRoute from "./Route/Route";
 const bodyParser = require("body-parser");
