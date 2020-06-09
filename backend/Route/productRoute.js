@@ -1,6 +1,6 @@
 import express from "express";
 import { isAdmin, isAuth } from "../util";
-import Product from "../../../Farm2Home/backend/Models/productModel";
+import Product from "../Models/productModel";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
