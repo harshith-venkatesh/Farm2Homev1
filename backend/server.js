@@ -5,7 +5,6 @@ import productRoute from "./Route/productRoute";
 import config from "./config";
 const mongoose = require("mongoose");
 const express = require("express");
-dotenv.config();
 
 const mongodbURL = process.env.MONGODB_URL;
 //console.log(mongodbURL);
