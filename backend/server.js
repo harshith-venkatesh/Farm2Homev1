@@ -9,7 +9,7 @@ const express = require("express");
 dotenv.config();
 
 const mongodbURL = process.env.MONGODB_URL;
-console.log(mongodbURL);
+//console.log(mongodbURL);
 mongoose.set("useCreateIndex", true);
 mongoose
   .connect(mongodbURL, {

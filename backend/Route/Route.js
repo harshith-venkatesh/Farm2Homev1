@@ -1,6 +1,6 @@
 import express from "express";
-import User from "../Models/UserModel";
 import { getToken, isAuth } from "../util";
+import User from "../../../Farm2Home/backend/Models/UserModel";
 const router = express.Router();
 
 router.post("/signin", async (req, res) => {
