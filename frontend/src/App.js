@@ -31,7 +31,7 @@ function App() {
       <div className="grid-container">
         <header className="header">
           <div className="brand">
-            <button onClick={openMenu}>&#9776;</button>
+            <button>&#9776;</button>
             <Link to="/">Farm2Home</Link>
           </div>
           <div className="header-links">
