@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import { logout } from "../actions/userActions";
+import StarRatings from "react-star-ratings";
 
 function HomeScreen(props) {
   const productList = useSelector((state) => state.productList);
@@ -42,7 +43,16 @@ function HomeScreen(props) {
 
               <div className="product-price">&#x20B9; {product.price} </div>
               <div className="product-rating">
-                {product.rating} Stars ({product.numReviews} reviews)
+                <StarRatings
+                  rating={product.rating}
+                  starRatedColor="yellow"
+                  //changeRating={this.changeRating}
+                  starDimension="25px"
+                  starSpacing="05px"
+                  numberOfStars={5}
+                  name="rating"
+                />
+                ({product.numReviews} reviews)
               </div>
             </div>
           </li>
