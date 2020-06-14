@@ -18,6 +18,7 @@ function CartScreen(props) {
   const handleLogout = () => {
     dispatch(logout());
     props.history.push("/signin");
+    window.location.reload();
   };
   useEffect(() => {
     if (productId) {
