@@ -187,6 +187,18 @@ a:hover {
   widows: 100%;
 }
 
+@media (max-width: 770px) {
+  .details-image {
+    flex: 2 1 60rem;
+  }
+
+  .details-image img {
+    max-width: 80rem;
+    max-height: 80rem;
+    widows: 100%;
+  }
+}
+
 .details-info {
   flex: 1 1 30rem;
 }
