@@ -31,12 +31,15 @@ function App() {
       <div className="grid-container">
         <header className="header">
           <div className="brand">
-            <button>&#9776;</button>
+            {/* onClick={openMenu} */}
+            {/* <button style={{ fontSize: "24px" }}>&#9776;</button> */}
             <Link to="/">Farm2Home</Link>
           </div>
           <div className="header-links">
             <Link to="/cart/1">
-              <a href="cart"> Cart </a>
+              <a style={{ fontSize: "24px" }} href="cart">
+                <strong>🛒</strong>
+              </a>
             </Link>
             {userInfo ? (
               <>
