@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
-import { logout } from "../actions/userActions";
+import "bootstrap/dist/css/bootstrap.min.css";
 import StarRatings from "react-star-ratings";
+import Carousel from "react-bootstrap/Carousel";
 
 function HomeScreen(props) {
   const productList = useSelector((state) => state.productList);
@@ -24,6 +25,54 @@ function HomeScreen(props) {
     <div>{error}</div>
   ) : (
     <>
+      <Carousel
+        controls={false}
+        indicators
+        interval={2500}
+        pauseOnHover={false}
+        className="carousel"
+      >
+        <Carousel.Item>
+          <img
+            className="carousel-image"
+            src="https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/AN_images/vegetables-fruit-healthy-eating-ingredients-1296x728-header.jpg?w=1155&h=1528"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>Fresh From Farm</h3>
+            <p style={{ color: "grey", fontWeight: "bold" }}>
+              Organic vegetbles for Healthy Life
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="carousel-image"
+            alt="Second slide"
+            src="https://img.buzzfeed.com/buzzfeed-static/static/2018-08/28/14/campaign_images/buzzfeed-prod-web-05/17-tricks-to-help-you-eat-healthy-without-even-tr-2-22264-1535482289-4_dblbig.jpg"
+          />
+
+          {/* <Carousel.Caption>
+            <h3>Second slide label</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </Carousel.Caption> */}
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="carousel-image"
+            alt="Third slide"
+            src="https://nexgenhomeandseniorcare.com/wp-content/uploads/2019/03/iStock512628566_jpg-produce-bounty.jpg"
+          />
+
+          {/* <Carousel.Caption>
+            <h3>Third slide label</h3>
+            <p>
+              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+            </p>
+          </Carousel.Caption> */}
+        </Carousel.Item>
+      </Carousel>
+
       <ul className="products">
         {products.map((product, i) => (
           <li key={i}>
