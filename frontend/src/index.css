@@ -190,12 +190,12 @@ a:hover {
 
 @media (max-width: 770px) {
   .details-image {
-    flex: 2 1 60rem;
+    flex: 2 1 40rem !important;
   }
 
   .details-image img {
-    max-width: 80rem;
-    max-height: 80rem;
+    max-width: 40rem;
+    max-height: 40rem;
     widows: 100%;
   }
 }
